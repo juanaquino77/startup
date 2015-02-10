@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="formValidation.js"></script>
+	<title>Form</title>
+</head>
+<body>
+	<h1>Sing Up</h1>
+	<form action="">
+		First name:
+		  <input type="text" name="firstName" required><br>
+		Last name:
+	      <input type="text" name="lastName" required><br>
+		Email:
+		  <input type="email" name="email" required><br>
+		Deporte favorito:
+		  <select name="sports">
+  			<option value="basquet">Basquet</option>
+  			<option value="futbol">Futbol</option>
+  			<option value="tenis">Tenis</option>
+  			<option value="natacion">Natacion</option>
+  			<option value="otro">Otro</option>
+		  </select>
+		  <br>
+		<textarea name="description" id="description" cols="30" rows="10"  required>Ingrese una breve biografia</textarea>
+		<br>
+		<button type="submit">Submit</button>
+		<button type="reset">Reset</button>
+	</form>
+</body>
+</html>
