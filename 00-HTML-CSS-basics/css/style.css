@@ -5,8 +5,31 @@ html{
 header, footer{
 	text-align: center;
 }
-
-
 header, footer, nav, aside{
 	background-color: #0099FF;
 }
+.header{
+	font-size: 46px;
+}
+.footer{
+	font-size: 10px;
+}
+.content{
+	font-size: 14px;
+}
+.navigation{
+	font-size: 12px;
+}
+.sidebar{
+	font-size: 10px;
+}
+*[class*="a"] {
+	background-color: blue;
+}
+*[class$="r"] {
+	background-color: magenta;
+}
+.oh-no-inline-styles{
+	background-color: green !important;
+}
+
