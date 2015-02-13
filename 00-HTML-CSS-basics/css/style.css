@@ -1,35 +1,80 @@
 html{
-	font-size: 14px;
+	font-size: 24px;
+	color: rgb(233,233,233);
 	font-family: "Times New Roman", Times, serif;
+	
 }
-header, footer{
+header, footer, nav, aside, .content{
+	background-color: rgb(102,102,102);
+}
+body{
+	background-color: rgb(51,51,51);
+	padding: 1em;
 	text-align: center;
 }
-header, footer, nav, aside{
-	background-color: #0099FF;
+h1{
+	font-size: 24px;
+	margin: 0;
+	font-weight: normal;
 }
+h2{
+	font-size: 24px;
+	margin: .5em;
+	font-weight: normal;
+}
+
+
+/*    Class   */
+
+
 .header{
-	font-size: 46px;
-}
-.footer{
-	font-size: 10px;
+	margin-bottom: 1em;
+	padding: 1.5em;
+	border-radius: 10px;
 }
 .content{
-	font-size: 14px;
+	width: 40%;
+	height: 600px;
+	display: inline-block;
+	margin: 0px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 0 1em;
+}
+.content header{
+	background-color: rgb(153,153,153);
+	border-radius: 10px;
+	padding: .5em;
+}
+.article{
+	background-color: rgb(153,153,153);
+	border-radius: 10px;
+	padding: .5em;
+	height: 270px;
+	margin: 20px 0;
+}
+.content footer{
+	background-color: rgb(153,153,153);
+	border-radius: 10px;
+	padding: .5px;
 }
 .navigation{
-	font-size: 12px;
+	width: 25%;
+	height: 600px;
+	border-radius: 10px;
+	text-align: center;
+	float: left;
 }
 .sidebar{
-	font-size: 10px;
+	width: 25%;
+	height: 600px;
+	float: right;
+	border-radius: 10px;
 }
-*[class*="a"] {
-	background-color: blue;
+.footer{
+	margin-top: 1em;
+	border-radius: 10px;
+	padding: 1em;
 }
-*[class$="r"] {
-	background-color: magenta;
-}
-.oh-no-inline-styles{
-	background-color: green !important;
-}
+
 
