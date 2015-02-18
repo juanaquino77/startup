@@ -1,4 +1,43 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html{
+	font-size: 120%;
+  font-family: "Times New Roman", Times, serif;
+}
+body{
+  margin: 0 auto;
+}
 section{
-	text-align: center;
-	visibility: hidden;
+  text-align: center;
+}
+aside{
+  width: 25.5rem;
+  background-color: rgba(192, 209, 211, 0.31);
+  padding: 1rem;
+}
+footer{
+  clear: both;
+  text-align: center;
+}
+.container{
+  margin: 0 auto;
+  width: 90%;
+  height: 900px;
+	max-width: 75rem;
+}
+.right{
+  float: right;
+}
+.left{
+  float: left;
+}
+.albums{
+  font-size: .5rem;
+}
+.albums h1{
+  color: red;
+  text-align: center;
 }

@@ -2,17 +2,19 @@ $(document).ready(function(){
 	$('.js-content').fadeIn( 'slow', function(){
 	  $('.js-fadeIn').css('visibility', 'visible');
 	});
-	$('.js-button').click(function(){
-	  var jqxhr = $.ajax( 'http://bootcamp.aws.af.cm/welcome/yourname.html').done(function(response)
-	  {
-	  	response.response='Welcome Juan Aquino!';
-    	$('.js-fadeIn').append('<p>' + response.response + '</p>');
-    	$('.js-highlight').click(function() {
-  			$('.js-fadeIn').toggle('highlight');
-			});
-    	})
-  		.fail(function() {
-    		$('.js-fadeIn').css('background-color', 'red');
+	$('.js-albums').click(function(){
+	  var jqxhr = $.get( 'https://api.spotify.com/v1/search?q=Rolling%20Stones&type=album')
+	  .done(function(response){
+	  	for (var i = 1; i <= response.albums.items.length; i++) {
+	  	  $('.items').append('<h3>' + response.albums.items[i].type + '</h3>');
+	  	  $('.items').append( i + ') ' + response.albums.items[i].name);
+	  	  $('.items').append('<p>' + '<img src="'+ response.albums.items[i].images[1].url +'" width="64px" height="64px">' + '</p>');
+	  	  $('.items').append('Link: ' + '<a href= "' + response.albums.items[i].external_urls.spotify + '" target="_blank" >'+ response.albums.items[i].name);
+		  $('.items h3').css('border-top', 'solid 1px gray');  	
+	  	}
+      })
+  		.fail(function(response) {
+    	  alert('servidor no responde');
   		});
 	});
 });
