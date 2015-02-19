@@ -14,7 +14,7 @@ section{
   text-align: center;
 }
 aside{
-  width: 25.5rem;
+  width: 80%;
   background-color: rgba(192, 209, 211, 0.31);
   padding: 1rem;
 }
@@ -40,4 +40,16 @@ footer{
 .albums h1{
   color: red;
   text-align: center;
+}
+.search{
+  width: 20%;
+}
+.inputSearch{
+  width: 80%;
+}
+.inputSearchAlbum{
+  width: 80%;
+}
+.button{
+  width: 80%;
 }
