@@ -67,13 +67,18 @@ var MovieObserver = function (){
 			console.log ("Stopped " + "" + "...");
 	})
 }
-/*
-$( '.signature' ).on( "click", function() {
-  alert( "texto");
-});
-$( '.signature' ).trigger( "click" );
 
-*/
 
-//$.on('event', callback)
-//var subscriber1 = subscribe( "playing", function( topic, data ){})
+
+/*------ Punto 8 --------*/
+
+var DownloadableMovie = function(name, boolean){
+	this.name = name;
+	this.isDownloable = boolean;
+};
+
+DownloadableMovie.prototype = new Movie();
+
+DownloadableMovie.prototype.download = function(){
+	console.log('me estoy bajando...');
+}
