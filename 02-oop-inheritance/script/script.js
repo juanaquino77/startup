@@ -85,11 +85,14 @@ DownloadableMovie.prototype.download = function(){
 	console.log('me estoy bajando...');
 }
 
+/*------ Puntos 9 y 10 ---------*/
+
 var social = {
 	share: function(friendName){
+		console.log(' Sharing ' + this.name + ' with ' + friendName)
+	},
+	like: function(){
 
 	}
-	like: function(){
-		
-	}
-}
+};
+$.extend(Movie.prototype, social);
