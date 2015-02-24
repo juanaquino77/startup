@@ -1,3 +1,9 @@
+
+//$(document).ready(function(){
+
+
+
+
 var Movie = function(name){ 
 	this.name = name;
 	this.actores = [];
@@ -25,10 +31,10 @@ Movie.prototype.getActores = function(){
 	return this.actores.join(", ");
 }
 Movie.prototype.play = function(){
-	console.log ("Playing " + this.name + "...");
+	$.trigger( 'playing' );
 }
 Movie.prototype.stop = function(){
-	console.log (this.name + " Stopped... ");
+	$.trigger( 'stopped' );
 }
 
 
@@ -51,6 +57,23 @@ elPianista.set("hd", true);
 elPianista.setActores("Adrien Brody");
 elPianista.setActores("Thomas Kretschmann");
 
+/*------ Punto 3 ---------*/
 
+var MovieObserver = function (){
+		$.on( 'playing', function () {
+			console.log ("Playin " + "" + "...");
+	}),
+		$.on( 'stopped', function () {
+			console.log ("Stopped " + "" + "...");
+	})
+}
+/*
+$( '.signature' ).on( "click", function() {
+  alert( "texto");
+});
+$( '.signature' ).trigger( "click" );
 
+*/
 
+//$.on('event', callback)
+//var subscriber1 = subscribe( "playing", function( topic, data ){})
