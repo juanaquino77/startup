@@ -77,8 +77,19 @@ var DownloadableMovie = function(name, boolean){
 	this.isDownloable = boolean;
 };
 
-DownloadableMovie.prototype = new Movie();
+//DownloadableMovie.prototype = new Movie();
+
+DownloadableMovie.prototype = Object.create (Movie.prototype);
 
 DownloadableMovie.prototype.download = function(){
 	console.log('me estoy bajando...');
+}
+
+var social = {
+	share: function(friendName){
+
+	}
+	like: function(){
+		
+	}
 }
