@@ -46,17 +46,17 @@ nueveReinas.set("genero", "Accion");
 nueveReinas.set("duracion", "120 minutos");
 nueveReinas.set("calidad", "HD");
 nueveReinas.set("hd", true);
-nueveReinas.setActores("Darin");
+/*nueveReinas.setActores("Darin");
 nueveReinas.setActores("Pauls");
-
+*/
 var  elPianista= new Movie("El Pianista");
 elPianista.set("genero", "Drama");
 elPianista.set("duracion", "150 minutos");
 elPianista.set("calidad", "HD");
 elPianista.set("hd", true);
-elPianista.setActores("Adrien Brody");
+/*elPianista.setActores("Adrien Brody");
 elPianista.setActores("Thomas Kretschmann");
-
+*/
 /*------ Punto 3 ---------*/
 
 var MovieObserver = function (){
@@ -96,3 +96,15 @@ var social = {
 	}
 };
 $.extend(Movie.prototype, social);
+
+/*------- puntos 11 y 12 ------*/
+
+var Actor = function(name, lastName, dni){
+	this.name = name;
+	this.lastName = lastName;
+	this.dani = dni;
+}
+
+var arana = new Actor('Facundo', 'Arana', 28300300);
+var darin = new Actor('Ricardo', 'Darin', 29852456);
+var pauls = new Actor('Ricardo', 'Darin', 19000888);
