@@ -68,6 +68,37 @@ var MovieObserver = function (){
 	})
 }
 
+/*------ Punto 7 --------*/
+var Movie = function () {
+
+  var model = {
+    attributes : {
+        name : '',
+        duracion : '',
+        genero : '',
+        actores : []
+        }
+    };
+
+    model.set = function (attr , value) {
+        model.attributes[attr] = value;
+    }
+
+    model.get  = function () {
+        return model.attributes;
+    }
+
+    model.play = function (){
+        console.log ('Playing '+ this.attributes['name'] +'...');
+    }
+
+    model.stop= function(){
+        console.log ('Stopped '+ this.attributes['name'] +'...');
+    }
+
+    return model;
+});
+
 
 
 /*------ Punto 8 --------*/
