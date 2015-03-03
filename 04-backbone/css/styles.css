@@ -1,0 +1,22 @@
+body{
+	background-color: #F0F0F0;
+	text-align: center;
+}
+.item{
+	width: 90%;
+	text-align: center;
+	display: inline-block;
+	background-color: #E4E4E4;
+	margin: 1rem;
+}
+.movie{
+	border: 1px solid gray;
+	margin: .5rem;
+	padding: 0.5rem;
+	float: left;
+	text-align: center;
+	width: 20%;
+	height: 100%;
+	display: inline-block;
+	background-color: #DDD5D5;
+}

@@ -1,6 +1,6 @@
 
 
-var director = require('../node_modules/movie.js');// o require('movie.js');
+var director = require('../node_modules/movie.js');// o require('movie');
 
 var dire = new director();
 console.log(dire.set('title', 'alien'));

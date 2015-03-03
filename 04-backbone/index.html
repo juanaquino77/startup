@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Backbone</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<h1>Peliculas!!!</h1>
+	<button class="movieBtn">Mostrar Peliculas</button>
+	<article class="item">
+
+	</article>
+
+
+	<script id="movie_template" type="text/x-handlebars-template">
+      {{#movies}}
+      	<div class="movie">
+	      	<h2> {{title}} </h2>
+			<img src="images/{{image}}.jpg" alt="Photo of {{title}}">
+			<h3> {{director}} </h3>
+			<h4> {{duration}} </h4>
+			<h4> {{year}} </h4>
+			<p> {{description}} </p>
+      	</div>
+      {{/movies}}
+	</script>	
+
+	<script src="lib/underscore.js"></script>
+	<script src="lib/handlebars-v3.0.0.js"></script>
+	<script src="lib/backbone-1.0.0.js"></script>
+	<script src="lib/jquery-1.11.2.js"></script>
+	<script src="js/main.js"></script>
+		
+</body>
+</html>
