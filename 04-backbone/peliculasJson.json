@@ -1,0 +1,39 @@
+{ "movies": [
+	{
+		"id": 1,
+		"title" : "Terminator",
+		"director" : "James Cameron",
+		"duration" : "107 minutes",
+		"image" : "terminator",
+		"year" : "1984",
+		"description" : "A human-looking indestructible cyborg is sent from 2029 to 1984 to assassinate a waitress, whose unborn son will lead humanity in a war against the machines, while a soldier from that war is sent to protect her at all costs."
+	},
+	{
+		"id": 2,
+		"title" : "The Usual Suspects",
+		"director" : "Bryan Singer",
+		"duration" : "106 minutes",
+		"image" : "the_usual_suspects",
+		"year" : "1995",
+		"description" : "A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which begin when five criminals meet at a seemingly random police lineup." 
+	},
+	{
+		"id": 3,
+		"title" : "Black Hawk Down",
+		"director" : "Ridley Scott",
+		"duration" : "144 minutes",
+		"image" : "black_hawk_down",
+		"year" : "2001",
+		"description" : "123 elite U.S. soldiers drop into Somalia to capture two top lieutenants of a renegade warlord and find themselves in a desperate battle with a large force of heavily-armed Somalis."
+	},
+	{
+		"id": 4,
+		"title" : "Taxi Driver",
+		"director" : "Martin Scorsese",
+		"duration" : "113 minutes",
+		"image" : "taxi_driver",
+		"year" : "1976",
+		"description" : "A mentally unstable Vietnam war veteran works as a night-time taxi driver in New York City where the perceived decadence and sleaze feeds his urge for violent action, attempting to save a preadolescent prostitute in the process."
+	}
+]
+}

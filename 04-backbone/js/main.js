@@ -1,52 +1,64 @@
 $(document).ready(function(){
+
+});
+	
+	Movie = Backbone.Model.extend({
+		defaults : {
+			title : '',
+			director : ''
+		},
+ 		initialize : function(){
+       		alert('Se ha creado una nueva pelicula')
+    	},
+	});	
+
+	MovieList = Backbone.Collection.extend({
+		model : Movie,
+		 localStorage: new Backbone.LocalStorage('peliculas'),
+		initialize : function(){
+	       alert('Se ha creado una nueva coleccion de peliculas')
+	    },
+});
+
+	MovieView = Backbone.View.extend({
+	
+	    render : function(){
+			$.getJSON('peliculasJson.json', function(data){
+				var template = $('#movie_template').html();
+				var html = Handlebars.compile(template);
+				var listo = html(data);
+				$('.item').html(listo);
+			});
+	    }
+	    
+	});
+	var movieView = new MovieView();
+	var coleccion =  new MovieList();
+
 	$('.movieBtn').click(function(){
-		$.getJSON('dato.json', function(data){
-			var template = $('#movie_template').html();
-			var html = Handlebars.compile(template);
-			var listo = html(data);
-			$('.item').html(listo);
+		movieView.render();
+	});
+
+	$('.saveBtn').click(function(){
+		$.getJSON('peliculasArray.json', function(data){
+			for (var i = 0; i < data.length; i++) {
+				coleccion.create(data[i]);
+				console.log(data[i]);
+			};
+				coleccion.create(titanic);
 		});
-	})
-})
+	});
 
-/*	var source = $('#first_template').html();
-	var template = Handlebars.compile(source);
 
-	var terminator = {
-		title: 'Titulo: Terminator',
-		director: 'Director: James Cameron',
-		duration: 'Duracion: 128 minutos',
-		description: "<p> Descripcion: La mejor pelicula de los 80!!! </p>",
-	}
+	var titanic = new Movie({
+		id : 5,
+		title : "Titanic",
+		director : "James Cameron",
+		duration : "194 minutes",
+		image : "titanic",
+		year : "1997",
+		description : "A seventeen-year-old aristocrat, expecting to be married to a rich claimant by her mother, falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic."
+	});
 
-	var titanic = {
-		title: 'Titanic',
-		director: 'Cameron',
-		duration: '428 minutos',
-		description: 'La mejor pelicula de barcos hundidos!!!',
-	}
 
-	var html_terminator = template(terminator);
-	var html_titanic = template(titanic);
-
-	$('.item').html( html_terminator);
-	//$('article').html( html_titanic);
-
-});
-
-*/
-
-/*Bootcamp = {};
-Bootcamp.MovieView = Backbone.View.extend({
-	tagName: 'li',
-	className: 'item',
-	render: function(){
-		var movie = this.model;
-		var title = movie.get('title');
-		var director = movie.get('director');
-		this.$el.html("<span>" + title + "</span> - <span>" + director + "</span>");
-	}
-
-});
-window.Bootcamp = Bootcamp;*/
 
