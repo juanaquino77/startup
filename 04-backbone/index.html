@@ -7,19 +7,42 @@
 </head>
 <body>
 	<h1>Peliculas!!!</h1>
-	<button class="movieBtn">Mostrar Peliculas</button>
-	<button class="saveBtn">Guardar Peliculas en Local Storage</button>
-	
-	<article class="item">
-	</article>
-	
+	<nav class="menu">
+		<button class="movieBtn">Mostrar Peliculas</button><br>
+		<button class="saveBtn">Cargar Peliculas</button><br>
+		<button class="detailsBtn">Mostrar detalles de las peliculas</button><br>
+		<button class="destroyBtn">Remover pelicula</button><br>
+		<div class="remove">
+			<p>Seleccione el id de la pelicula
+			<select id="seleccion" class="seleccion">
+        	</select>
+			<button class="eliminar">Eliminar</button><br>
+        	</p>
+		</div>		
+		<button class="addBtn">Añadir pelicula</button><br>
+		<div class="add">
+			<p class="addMovie"> 
+				<span class="tab">Titulo</span> <input type="text" class="title">
+			 	<span class="tab">Director</span> <input type="text" class="director">
+			 	<span class="tab">Duracion</span> <input type="text" class="duration">
+			 	<span class="tab">Año</span> <input type="text" class="year">
+			 	<textarea class="description" rows="4" cols="25">Descripcion</textarea> 
+				<button class="loadMovie">Load</button><br>
+        	</p>
+		</div>	
 
-
+	</nav>
+	<div class="container">
+		<article class="details">
+		</article>
+		<article class="item">
+		</article>
+	</div>
 	<script id="movie_template" type="text/x-handlebars-template">
       {{#movies}}
       	<div class="movie">
 	      	<h2> {{title}} </h2>
-			<img src="images/{{image}}.jpg" alt="Photo of {{title}}">
+			<img class= "img" src="images/{{image}}.jpg" alt="Photo of {{title}}">
 			<h3> {{director}} </h3>
 			<h4> {{duration}} </h4>
 			<h4> {{year}} </h4>

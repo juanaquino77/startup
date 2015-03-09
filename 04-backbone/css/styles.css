@@ -2,12 +2,22 @@ body{
 	background-color: #F0F0F0;
 	text-align: center;
 }
+.img{
+	width: 100%;
+}
+.movieBtn, .saveBtn, .addBtn, .detailsBtn, .destroyBtn{
+	width: 100%;
+}
+.container{
+	width: 75%;
+	float: left;
+	margin: 0 1rem;
+}
 .item{
-	width: 90%;
+	width: 95%;
 	text-align: center;
 	display: inline-block;
 	background-color: #E4E4E4;
-	margin: 1rem;
 }
 .movie{
 	border: 1px solid gray;
@@ -19,4 +29,21 @@ body{
 	height: 100%;
 	display: inline-block;
 	background-color: #DDD5D5;
+}
+.menu{
+	width: 20%;
+	float: left;
+}
+.titulo{
+	text-align: left;
+	margin: 0;
+}
+.remove{
+	display: none;
+}
+.addMovie{
+	text-align: left;
+}
+.add{
+	display: none;
 }
