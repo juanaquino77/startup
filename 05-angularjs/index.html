@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="movies">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+    <script src="lib/angular.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+	<title>Angular</title>
+</head>
+<body>
+    <div class="container">   
+      <div class="header">  
+        <h1>Peliculas en Angular.js!!!!</h1>
+      </div>
+      <div class="pageContent" ng-controller="movieController as movieCtrl">
+        <div  data-equalizer>
+            
+        <div class="movie" ng-repeat="peliculas in movieCtrl.movie.coleccion" data-equalizer-watch>
+            <h2><span class="title"> {{peliculas.title}} </span></h2>
+                <div class="img">
+                    <img src="images/{{peliculas.image}}.jpg" alt="imagen de la pelicula">
+                </div>
+            <ul class="justify">
+                <li> Director: <span class="item"> {{peliculas.director}} </span></li>
+                <li> Duracion: <span class="item"> {{peliculas.duration}} </span></li>
+                <li> Año: <span class="item"> {{peliculas.year}} </span></li>
+                <li> Actores: <span ng-repeat="actor in peliculas.actors" class="item"> {{actor}}, </span></li>
+                <li> Genero: <span class="item"  ng-repeat="genre in peliculas.genres"> {{genre}}, </span></li>
+                <li> Descripcion: <span class="item"> {{peliculas.description}} </span></li>
+                <li> Ver Online: 
+                    <ul>
+                        <li ng-repeat="link in peliculas.links"><a href="#"> {{link}} </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
