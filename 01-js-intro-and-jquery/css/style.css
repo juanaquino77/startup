@@ -43,6 +43,7 @@ footer{
 }
 .search{
   width: 20%;
+  display: none;
 }
 .inputSearch{
   width: 80%;
