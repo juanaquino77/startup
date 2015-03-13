@@ -3,54 +3,54 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-html{
-	font-size: 120%;
+html {
+  font-size: 120%;
   font-family: "Times New Roman", Times, serif;
 }
-body{
+body {
   margin: 0 auto;
 }
-section{
+section {
   text-align: center;
 }
-aside{
+aside {
   width: 80%;
   background-color: rgba(192, 209, 211, 0.31);
   padding: 1rem;
 }
-footer{
+footer {
   clear: both;
   text-align: center;
 }
-.container{
+.container {
   margin: 0 auto;
   width: 90%;
   height: 900px;
 	max-width: 75rem;
 }
-.right{
+.right {
   float: right;
 }
-.left{
+.left {
   float: left;
 }
-.albums{
+.albums {
   font-size: .5rem;
 }
-.albums h2{
+.albums h2 {
   color: red;
   text-align: center;
 }
-.search{
+.search {
   width: 20%;
   display: none;
 }
-.inputSearch{
+.inputSearch {
   width: 80%;
 }
-.inputSearchAlbum{
+.inputSearchAlbum {
   width: 80%;
 }
-.button{
+.button {
   width: 80%;
 }
