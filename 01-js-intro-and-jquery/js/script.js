@@ -1,5 +1,7 @@
 $(document).ready(function(){
-	$('.js-search').fadeIn( 'slow');
+	$('.js-search').fadeIn( 'slow', function(){
+		$('.alias').focus();
+	});
 	$('.js-albums').click(function(){
 	  var url = 'https://api.spotify.com/v1/search?q=';
 	  var artist = $('.inputSearch').val();
