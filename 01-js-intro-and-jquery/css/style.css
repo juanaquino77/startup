@@ -54,3 +54,6 @@ footer {
 .button {
   width: 80%;
 }
+.borderTop {
+  border-top: solid 1px gray;  
+}

@@ -8,12 +8,15 @@ $(document).ready(function() {
 	  	var urlNew = url + artist + '&type=album';
 	  	var jqxhr = $.get(urlNew)
 	  	.done(function(response) {
-	  	  	for (var i = 1; i <= response.albums.items.length; i++) {
-	  	  		$('.items').append('<h3>' + response.albums.items[i].type + '</h3>');
-	  	  		$('.items').append( i + ') ' + response.albums.items[i].name);
-	  	  		$('.items').append('<p>' + '<img src="'+ response.albums.items[i].images[1].url +'" width="64px" height="64px" />' + '</p>');
-	  	  		$('.items').append('Link: ' + '<a href= "' + response.albums.items[i].external_urls.spotify + '" target="_blank" >'+ response.albums.items[i].name);
-		  		$('.items h3').css('border-top', 'solid 1px gray');  	
+	  		var total = response.albums.items.length;
+	  	  	for (var i = 0; i < total; i++) {
+	  	  		var item = {};
+	  	  		item = response.albums.items[i];
+	  	  		$('.items').append('<h3>' + item.type + '</h3>');
+	  	  		$('.items').append( (i+1) + ') ' + item.name);
+	  	  		$('.items').append('<p>' + '<img src="'+ item.images[1].url +'" width="64px" height="64px" />' + '</p>');
+	  	  		$('.items').append('Link: ' + '<a href= "' + item.external_urls.spotify + '" target="_blank" >'+ item.name);
+		  		$('.items').addClass('borderTop');
 	  	  	};
       	})
   		.fail(function(response) {
