@@ -1,34 +1,17 @@
 
-//$(document).ready(function(){
-
-
-
-
-var Movie = function(name){ 
-	this.name = name;
-	this.actores = [];
+var Movie = function(){
+	this.attributes = {
+		title : '',
+		director : '',
+		genre : '',
+	} 
 }
-Movie.prototype.genero = "";
 
-Movie.prototype.duracion = "0 minutos";
-
-Movie.prototype.calidad = "";
-
-Movie.prototype.hd = false;
-
-/*Movie.prototype.actores = [];*/
-
-Movie.prototype.set = function(atributo, valor){ 
-	this[atributo] = valor;
+Movie.prototype.set = function(attr, valor){ 
+	this.attributes[attr] = valor;
 }
 Movie.prototype.get = function(valor){
-	return this[valor];
-}
-Movie.prototype.setActores = function(valor){ 
-	this.actores.push(valor);
-}
-Movie.prototype.getActores = function(){
-	return this.actores.join(", ");
+	return this.attributes[valor];
 }
 Movie.prototype.play = function(){
 	$.trigger( 'playing' );
@@ -46,29 +29,26 @@ nueveReinas.set("genero", "Accion");
 nueveReinas.set("duracion", "120 minutos");
 nueveReinas.set("calidad", "HD");
 nueveReinas.set("hd", true);
-/*nueveReinas.setActores("Darin");
-nueveReinas.setActores("Pauls");
-*/
+
 var  elPianista= new Movie("El Pianista");
 elPianista.set("genero", "Drama");
 elPianista.set("duracion", "150 minutos");
 elPianista.set("calidad", "HD");
 elPianista.set("hd", true);
-/*elPianista.setActores("Adrien Brody");
-elPianista.setActores("Thomas Kretschmann");
-*/
+
 /*------ Punto 3 ---------*/
 
 var MovieObserver = function (){
-		$.on( 'playing', function () {
+		$(document).on( 'playing', function () {
 			console.log ("Playin " + "" + "...");
 	}),
-		$.on( 'stopped', function () {
+		$(document).on( 'stopped', function () {
 			console.log ("Stopped " + "" + "...");
 	})
 }
 
 /*------ Punto 7 --------*/
+
 var Movie = function () {
 
   var model = {
@@ -97,7 +77,7 @@ var Movie = function () {
     }
 
     return model;
-});
+};
 
 
 
@@ -108,7 +88,6 @@ var DownloadableMovie = function(name, boolean){
 	this.isDownloable = boolean;
 };
 
-//DownloadableMovie.prototype = new Movie();
 
 DownloadableMovie.prototype = Object.create (Movie.prototype);
 
@@ -128,7 +107,7 @@ var social = {
 };
 $.extend(Movie.prototype, social);
 
-/*------- puntos 11 y 12 ------*/
+/*------- puntos 11 ------*/
 
 var Actor = function(name, lastName, dni){
 	this.name = name;
@@ -139,3 +118,8 @@ var Actor = function(name, lastName, dni){
 var arana = new Actor('Facundo', 'Arana', 28300300);
 var darin = new Actor('Ricardo', 'Darin', 29852456);
 var pauls = new Actor('Ricardo', 'Darin', 19000888);
+
+/*------- puntos 12 ------*/
+
+var peli = new Movie();
+peli.set("actors",[]);
